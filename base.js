@@ -82,3 +82,103 @@ const tasse = {
     price: 1,
     content_volume: 25
 }
+
+const eleve = {
+    name: "Jean-Michel",
+    age: 18,
+    class: "Terminal",
+    notes: [13, 18, 19, 2, 16, 15.5]
+}
+
+console.log(eleve.name)
+//Calcule de la moyenne de Jean-Michel
+//En codage naïf.
+let moyenne = (eleve.notes[0] + eleve.notes[1] + eleve.notes[2] + eleve.notes[3] + eleve.notes[4] + eleve.notes[5]) /6
+console.log(moyenne)
+
+// OPERATEUR
+
+//L'affectation
+//On donne la valeur de 7 à la variable "aa"
+let aa = 7
+
+//l'addition
+// La valeur 7 est écrasé par l'addition de 12 + 4 donc la variable "aa" est maintenant égal à 16.
+aa = 12 + 4;
+console.log(aa); // donne 16
+//L'affectation aprés l'addition
+//Avec cette écriture on n'écrase pas la valeur mais on ajoute 4 à l'ancienne valeur
+aa += 4;
+console.log(aa); // donne 20
+
+//la soustraction
+// La valeur 7 est écrasé par la soustraction de 12 - 4 donc la variable "bb" est maintenant égal à 16.
+bb = 20 - 4;
+console.log(bb); // donne 16
+//L'affectation aprés la soustraction
+//Avec cette écriture on n'écrase pas la valeur mais on retire 4 à l'ancienne valeur
+bb -= 4;
+console.log(bb); // donne 12
+
+//la multiplication
+// La valeur 7 est écrasé par la multiplication de 5 * 8 donc la variable "cc" est maintenant égal à 40.
+cc = 5 * 8;
+console.log(cc); // donne 40
+//L'affectation aprés la multiplication
+//Avec cette écriture on n'écrase pas la valeur mais on multiplie par 2 à l'ancienne valeur
+cc *= 2;
+console.log(cc); // donne 80
+
+//la division
+// La valeur 7 est écrasé par la division de 5 * 8 donc la variable "dd" est maintenant égal à 5.
+dd = 20 / 4;
+console.log(dd); // donne 5
+//L'affectation aprés la division
+//Avec cette écriture on n'écrase pas la valeur mais on divise par 2 à l'ancienne valeur
+dd /= 2;
+console.log(dd); // donne 2.5
+
+//Les modulo
+let ee = 13 % 5
+console.log(ee) //donne 3
+
+//l'exponentiel
+let ff = 3 ** 2
+console.log(ff) // 9
+
+//Les conditions
+
+let gg = 4;
+let hh = 4;
+let ii = 9;
+
+if (gg == hh) {
+    // Si la condition est bien rempli
+}else{
+    //Si la condition n'est pas rempli
+}
+
+//Vérification égalité non strict
+if ( 6 == "6"){
+    console.log("ca marche")
+}
+
+//égalité strict
+//L'ÉGALITÉ STRICT VÉRIFIE EN PLUS LE TYPE DE DONNÉES, ici l'égalité est fausse car 6 est un number et "6" est un chaîne de caractère
+if ( 6 === "6"){
+    /////
+}else{
+
+    console.log("ca marche pas")
+    }
+
+//on va vérifier si JM est majeur
+
+if(eleve.age >= 18){
+    // ici on va faire une concaténation (coller plusieurs chaînes de caractères entre elles) avec le nom de l'elève et un texte descriptif
+    console.log(eleve.name + " est bien majeur")
+}else{
+    //concaténation de littéral de gabarit
+    console.log(`${eleve.name} n'est pas majeur`)
+}
+

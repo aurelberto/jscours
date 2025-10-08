@@ -31,3 +31,16 @@ color: white;
 ul li a:hover {
     color: wheat;
 }
+button {
+    border: none;
+    background-color: royalblue;
+    color: wheat;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+
+}
+button:hover {
+    background-color: rgb(116, 142, 228);
+    cursor: pointer;
+}
