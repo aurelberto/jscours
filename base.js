@@ -181,4 +181,137 @@ if(eleve.age >= 18){
     //concaténation de littéral de gabarit
     console.log(`${eleve.name} n'est pas majeur`)
 }
+ const vitessedDeLaLumière = 299_792_458; //constante dans le vide
 
+ const table = [1, 2, 3]
+ table.push(4)
+ console.log(table)
+
+ const ingredients = []; //tableau vide qu'on va remplir plus tard
+
+ //ici on va fabriquer un plus qui permettra de construire plus simplement des ingredients, on appelle ca en JS le prototypage
+ 
+ class Ingredient {
+    constructor(nom, unite, quantite) {
+        this.nom = nom;
+        this.unite = unite;
+        this.quantite = quantite;
+    }
+ }
+
+ class Recette {
+    constructor (nom_recette, nbr_personne, etape, liste_ingredients){
+        this.nom_recette = nom_recette;
+        this.nbr_personne = nbr_personne;
+        this.etape = etape;
+        this.liste_ingredients = liste_ingredients
+    }
+ }
+
+ const sucreDeCanne = new Ingredient ("Sucre de canne","g", 75);
+ const lait = new Ingredient ("Lait", "cl", 25);
+const oeuf = new Ingredient("Oeuf","oeufs(s)", 3);
+const pain = new Ingredient("Pains", "tranche(s) de pain",6 )
+console.log(sucreDeCanne)
+
+//Je vais donc mettre mes ingredients dans le tableau ingredients
+
+ingredients.push(sucreDeCanne);
+ingredients.push(lait);
+ingredients.push(oeuf);
+ingredients.push(pain);
+ console.log(ingredients);
+
+ const etapes = ["Fouetter les oeufs avec le sucre et le lait.", "Y tremper les tranches de pain.", "Deux solutions pour la cuisson : les cuire à la poêle dans du beurre en les faisant dorer de chaque côté, ou, les cuire au four : beurrer légèrement un plat à gratin, y répartir les tranches, verser le reste du mélange (ajouter du sucre si envie), laisser cuire à 180°C (thermostat 6) jusqu'à que les tranches soient dorées."]
+ const pain_perdu = new Recette("pain perdu",4, etapes, ingredients);
+ console.log(pain_perdu);
+
+ //LES BOUCLES
+
+ 
+ console.log("coucou !")
+ console.log("coucou !")
+ console.log("coucou !")
+ // Imaginons que j'ai besoin d'écrire dans un cole.log 0 patates à 2000 patates.
+ //allons-nous écrire à la main concole.log 2001 fois?
+ //NON, nous allons utiliser une boucle, pour cette exemple, nous allons utiliser la boucle for.
+
+ for (let i = 0; i  <= 2000; i++){
+    console.log(i + "patate(s)");
+ };
+
+ let n = 0;
+while (n < 6){
+    console.log(n + " * 5 est égale à " + n * 5);
+    n++
+}
+
+// Exercice
+// Utiliser une boucle "while" pour générer 10 nombres aléatoires
+// compris entre 0 et 100, puis les afficher dans la console
+
+let nb = 0; // le compteur
+while(nb < 101){ // la condition, tant que nb est inf à 100
+  console.log("résultat " + Math.floor(Math.random() * 10)); 
+  // affiche le résultat.
+  nb++; // incrémente de 1.
+}
+
+//Do While
+
+//let password;
+//do{
+//password = prompt("Entrez le mot de passe")
+//} while(password !== "abc123")
+
+
+
+//console.log("Tu as trouver le mot de passe");
+
+/// On simule un lancer de dé qui continue jusqu'a ce le joueur obtienne 6.
+// On ne peut pas savoir d'avance combien de fois il faudra éxécuté la boucle
+
+let de;
+
+do {
+  de = Math.floor((Math.random() * 6) + 1); // va aller jusque 5
+  console.log("Résultat du dé: " + de);
+}while(de !== 6)
+
+console.log("Tu as fais un 6 !!!")
+
+// Boucle For
+
+for (let i = 0; i < 5; i++){
+    console.log("Compteur : " +i);
+}
+
+//Boucle fort -> traverser les tableaux
+
+let voitures = ["Dacia", "Lada", "Audi", "Daihutsu", "Toyota", "Chevrolet"];
+
+for ( let i = 0; i < voitures.length; i++){
+    console.log(voitures[i])
+}
+//Boucle FOR ... OF
+
+let fruits = ["la Pomme", "Le Kiwi", "Le Durian"]
+for (let fruit of fruits) {
+    console.log('J\'aime ' + fruit)
+}
+
+//exercice
+
+//vous allez me créer un ul/li dans la div container 
+const gafam =  ["Google", "Amazon", "Facebook", "Apple", "Microsoft"];
+//A partir d'une boucle for of, vous allez m'afficher dans chaque li le nom d'une de ces sociétés
+
+const container = document.getElementById("container")
+const ul = document.createElement("ul")
+container.appendChild(ul)
+
+for (let reseaux of gafam) {
+    const li = document.createElement("li")
+    li.innerHTML = reseaux
+    ul.appendChild(li)
+}
